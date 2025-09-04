@@ -1,18 +1,18 @@
 Party Name,abbreviation
 United Democratic Alliance,"['UDA']"
 Wiper Democratic Movement- Kenya,"['Wiper','Wiper-Kenya', 'Wiper-K', 'WDM', 'WDM-K']"
-Vibrant Democratic Party,
+Vibrant Democratic Party,"['VDP']"
 Usawa Kwa Wote Party,"['UKW']"
 United Progressive Alliance,"['UPA']"
 United Party Of Independent Alliance,"['UPIA']"
 United Green Movement,"['UGM']"
 United Democratic Party,"['UDP']"
 United Democratic Movement,"['UDM']"
-Unified Change Party,
-Umoja Summit Party,
+Unified Change Party,"['UCP']"
+Umoja Summit Party,"['USP']"
 Umoja Na Maendeleo Party,"['UMP']"
 Ubuntu Peoples Forum,"['UPF']"
-Tujibebe Wakenya Party,
+Tujibebe Wakenya Party,"['JIBEBE']"
 Thirdway Alliance Kenya,
 The Service Party,"['TSP']"
 The New Democrats,
@@ -21,7 +21,7 @@ The Labour Party Of Kenya,"['LPK']"
 Shirikisho Party Of Kenya,"['SPK']"
 Safina,
 Roots Party Of Kenya,"['Roots', 'RPK']"
-Republican Liberty Party,
+Republican Liberty Party,"['RLP']"
 Progressive Party Of Kenya,
 Peoples Trust Party,"['PTP']"
 Peoples Party Of Kenya,"['PPK']"
@@ -30,10 +30,10 @@ Peoples Democratic Party,
 Party Of National Unity,"['PNU']"
 Party Of Independent Candidates Of Kenya,
 Party Of Democratic Unity,"['PDU']"
-Party For Peace And Development,
+Party For Peace And Development,"['PPD']"
 Pamoja African Alliance,"['PAA']"
 Orange Democratic Movement,"['ODM']"
-National Reconstruction Alliance,
+National Reconstruction Alliance,"['NRA']"
 National Rainbow Coalition-Kenya,
 National Rainbow Coalition,
 National Ordinary Peoples Empowerment Union,"['NOPEU']"
@@ -46,7 +46,7 @@ Movement For Democracy And Growth,"['MDG']"
 Mazingira Greens Party Of Kenya,"['MGP']"
 Maendeleo Democratic Party,
 Maendeleo Chap Chap Party,"['MCCP']"
-Mabadiliko Party Of Kenya,
+Mabadiliko Party Of Kenya,"['MAPK', 'MAP-K']"
 Liberal Democratic Party,"['LDP']"
 Kenya Union Party,"['KUP']"
 Kenya Social Congress,"['KSC']"
@@ -57,25 +57,25 @@ Kenya African National Union,"['KANU']"
 Kenya African Democratic Union-Asili,"['KADU', 'KADU-Asili']"
 Justice And Freedom Party,"['JFP']"
 Jubilee Party,"['Jubilee', 'JP']"
-Jirani Mzalendo Asili Party Of Kenya,
-Green Thinking Action Party,
+Jirani Mzalendo Asili Party Of Kenya,"['J-MAPK']"
+Green Thinking Action Party,"['GTAP']"
 Green Congress Of Kenya,"['GCK']"
 Grand Dream Development Party,"['GDDP']"
 Forum For Restoration Of Democracy-Kenya,"['FORD-K', 'FORD-Kenya', 'FORD']"
 Federal Party Of Kenya,"['FPK']"
 Farmers Party,"['FP']"
-Entrust Pioneer Party,
+Entrust Pioneer Party,"['EPP']"
 Empowerment And Liberation Party,
 Economic Freedom Party,"['EFP']"
-Devolution Party Of Kenya,
-Devolution Empowerment Party,
+Devolution Party Of Kenya,"['DPK']"
+Devolution Empowerment Party,"['DEP']"
 Democratic Party Of Kenya,"['DP', 'DPK']"
 Democratic Congress,"['DC']"
 Democratic Action Party- Kenya,"['DAP-K', 'DAP', 'DAP-Kenya']"
 Communist Party Of Kenya,
 Chama Cha Uzalendo,
 Chama Cha Mashinani,"['CCM']"
-Chama Cha Kazi,
+Chama Cha Kazi,"['KAZI']"
 Amani National Congress,"['ANC']"
 Alternative Leadership Party Of Kenya,"['ALP-K', 'ALP-Kenya', 'ALP']"
 Agano Party,"['AGANO']"
