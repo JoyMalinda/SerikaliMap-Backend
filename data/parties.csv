@@ -1,20 +1,20 @@
 Party Name,abbreviation
 United Democratic Alliance,"['UDA']"
-Wiper Democratic Movement- Kenya,"['Wiper', 'WDM']"
+Wiper Democratic Movement- Kenya,"['Wiper','Wiper-Kenya', 'Wiper-K', 'WDM', 'WDM-K']"
 Vibrant Democratic Party,
 Usawa Kwa Wote Party,
-United Progressive Alliance,
-United Party Of Independent Alliance,
+United Progressive Alliance,"['UPA']"
+United Party Of Independent Alliance,"['UPIA']"
 United Green Movement,
-United Democratic Party,
-United Democratic Movement,
+United Democratic Party,"['UDP']"
+United Democratic Movement,"['UDM']"
 Unified Change Party,
 Umoja Summit Party,
 Umoja Na Maendeleo Party,
 Ubuntu Peoples Forum,
 Tujibebe Wakenya Party,
 Thirdway Alliance Kenya,
-The Service Party,
+The Service Party,"['TSP']"
 The New Democrats,
 The National Vision Party,
 The Labour Party Of Kenya,
@@ -31,20 +31,21 @@ Party Of National Unity,
 Party Of Independent Candidates Of Kenya,
 Party Of Democratic Unity,
 Party For Peace And Development,
-Pamoja African Alliance,
+Pamoja African Alliance,"['PAA']"
 Orange Democratic Movement,"['ODM']"
 National Reconstruction Alliance,
 National Rainbow Coalition-Kenya,
 National Rainbow Coalition,
-National Ordinary Peoples Empowerment Union,
+National Ordinary Peoples Empowerment Union,"['NOPEU']"
 National Liberal Party,
 National Agenda Party Of Kenya,
+National Alliance Party of Kenya,"['NAP-K','NAP-Kenya', 'NAK', 'NAPK']"
 Mwangaza Tu Party,
 Muungano Party,
-Movement For Democracy And Growth,
+Movement For Democracy And Growth,"['MDG']"
 Mazingira Greens Party Of Kenya,
 Maendeleo Democratic Party,
-Maendeleo Chap Chap Party,
+Maendeleo Chap Chap Party,"['MCCP']"
 Mabadiliko Party Of Kenya,
 Liberal Democratic Party,
 Kenya Union Party,"['KUP']"
@@ -59,8 +60,8 @@ Jubilee Party,"['Jubilee', 'JP']"
 Jirani Mzalendo Asili Party Of Kenya,
 Green Thinking Action Party,
 Green Congress Of Kenya,
-Grand Dream Development Party,
-Forum For Restoration Of Democracy-Kenya,
+Grand Dream Development Party,"['GDDP']"
+Forum For Restoration Of Democracy-Kenya,"['FORD-K', 'FORD-Kenya', 'FORD']"
 Federal Party Of Kenya,
 Farmers Party,
 Entrust Pioneer Party,
@@ -68,13 +69,13 @@ Empowerment And Liberation Party,
 Economic Freedom Party,
 Devolution Party Of Kenya,
 Devolution Empowerment Party,
-Democratic Party Of Kenya,
+Democratic Party Of Kenya,"['DP']"
 Democratic Congress,
-Democratic Action Party- Kenya,
+Democratic Action Party- Kenya,"['DAP-K', 'DAP', 'DAP-Kenya']"
 Communist Party Of Kenya,
 Chama Cha Uzalendo,
-Chama Cha Mashinani,
+Chama Cha Mashinani,"['CCM']"
 Chama Cha Kazi,
-Amani National Congress,
+Amani National Congress,"['ANC']"
 Alternative Leadership Party Of Kenya,
 Agano Party,
