@@ -11,6 +11,11 @@ python-dotenv = "*"
 flask-cors = "*"
 flask-migrate = "*"
 psycopg = {extras = ["binary"], version = "*"}
+sqlalchemy-serializer = "*"
+geoalchemy2 = "*"
+flask-restful = "*"
+shapely = "*"
+geojson = "*"
 
 [dev-packages]
 black = "*"
