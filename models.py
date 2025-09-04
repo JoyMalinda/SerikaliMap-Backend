@@ -24,9 +24,9 @@ class County(db.Model, SerializerMixin, TimestampMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False, unique=True)
-    code = db.Column(db.Integer, nullable=False, unique=True)
+    code = db.Column(db.String, nullable=False, unique=True)
     population = db.Column(db.Integer, nullable=True)
-    area = db.Column(db.Integer, nullable=True)
+    area = db.Column(db.Float, nullable=True)
     population_density = db.Column(db.Integer, nullable=True)
     geom = db.Column(Geometry(geometry_type="MULTIPOLYGON", srid=4326))
 
@@ -61,10 +61,10 @@ class Constituency(db.Model, SerializerMixin, TimestampMixin):
     county_id = db.Column(
         db.Integer, db.ForeignKey("counties.id", ondelete="CASCADE"), nullable=False
     )
-    code = db.Column(db.Integer, nullable=False, unique=True)
+    code = db.Column(db.String, nullable=False, unique=True)
     population = db.Column(db.Integer, nullable=True)
-    area = db.Column(db.Integer, nullable=True)
-    population_density = db.Column(db.Integer, nullable=True)
+    area = db.Column(db.Float, nullable=True)
+    population_density = db.Column(db.Float, nullable=True)
     geom = db.Column(Geometry(geometry_type="MULTIPOLYGON", srid=4326))
 
     county = db.relationship("County", back_populates="constituencies")
@@ -100,7 +100,7 @@ class Ward(db.Model, SerializerMixin, TimestampMixin):
     constituency_id = db.Column(
         db.Integer, db.ForeignKey("constituencies.id", ondelete="CASCADE"), nullable=False
     )
-    code = db.Column(db.Integer, nullable=False, unique=True)
+    code = db.Column(db.String, nullable=False, unique=True)
     geom = db.Column(Geometry(geometry_type="MULTIPOLYGON", srid=4326))
 
     constituency = db.relationship("Constituency", back_populates="wards")
