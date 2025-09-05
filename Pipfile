@@ -16,6 +16,8 @@ geoalchemy2 = "*"
 flask-restful = "*"
 shapely = "*"
 geojson = "*"
+services = "*"
+requests = "*"
 
 [dev-packages]
 black = "*"

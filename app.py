@@ -9,6 +9,8 @@ from models import db
 
 from urllib.parse import quote_plus
 
+from resources.location_search import LocationLookup
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -28,7 +30,7 @@ app.config['JSON_SORT_KEYS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 CORS(app, supports_credentials=True, resources={
-    r"/*": {"origins": ["http://127.0.0.1:5432", "http://localhost:5432"]}
+    r"/*": {"origins": ["http://127.0.0.1:5555", "http://127.0.0.1:5555", "http://127.0.0.1:5432", "http://localhost:5432"]}
 })
 api = Api(app)
 
@@ -37,6 +39,7 @@ api = Api(app)
 def index():
     return jsonify({"message": "Flask app is running!"})
 
+api.add_resource(LocationLookup, "/location_search")
 
 if __name__ == "__main__":
     app.run(debug=True)

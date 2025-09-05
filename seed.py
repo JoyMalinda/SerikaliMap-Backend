@@ -418,7 +418,7 @@ with app.app_context():
     with open(FILES['women_csv'], newline='', encoding='utf-8') as fh:
         reader = csv.DictReader(fh)
         for row in reader:
-            name = (row.get('name') or row.get('Name') or '').strip()
+            name = (row.get('name') or row.get('Name') or '').strip().title()
             county = (row.get('county') or row.get('County') or '').strip()
             party = (row.get('party') or row.get('Party') or '').strip()
             photo = (row.get('image_url') or row.get('image') or row.get('image_local_path') or '')
