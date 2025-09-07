@@ -205,7 +205,7 @@ class Term(db.Model, SerializerMixin, TimestampMixin):
         db.Integer, db.ForeignKey("positions.id", ondelete="RESTRICT"), nullable=False
     )
     party_id = db.Column(
-        db.Integer, db.ForeignKey("parties.id", ondelete="RESTRICT"), nullable=False
+        db.Integer, db.ForeignKey("parties.id", ondelete="RESTRICT"), nullable=True
     )
 
     start_year = db.Column(db.Integer, nullable=False)
