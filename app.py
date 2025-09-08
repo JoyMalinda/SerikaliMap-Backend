@@ -10,6 +10,7 @@ from models import db
 from urllib.parse import quote_plus
 
 from resources.location_search import LocationLookup
+from resources.presidents import PresidentsResource
 
 load_dotenv()
 
@@ -39,7 +40,9 @@ api = Api(app)
 def index():
     return jsonify({"message": "Flask app is running!"})
 
+
 api.add_resource(LocationLookup, "/location_search")
+api.add_resource(PresidentsResource, "/presidents")
 
 if __name__ == "__main__":
     app.run(debug=True)

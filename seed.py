@@ -139,7 +139,7 @@ with app.app_context():
         { 'name': 'Deputy Governor', 'level': 'county' },
         { 'name': 'Senator', 'level': 'county' },
         { 'name': 'Women Rep', 'level': 'county' },
-        { 'name': 'MP', 'level': 'national' },
+        { 'name': 'MP', 'level': 'constituency' },
         { 'name': 'President', 'level': 'national' },
         { 'name': 'Vice President', 'level': 'national' },
         { 'name': 'Deputy President', 'level': 'national' },
