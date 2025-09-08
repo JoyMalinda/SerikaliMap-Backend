@@ -545,3 +545,4 @@ with app.app_context():
     db.session.commit()
 
     print('Seeding complete.')
+    print('Officials:', Official.query.count())
