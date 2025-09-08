@@ -64,38 +64,44 @@ class MapboxGeocodingService:
         }
 
     def get_current_leaders(self, constituency_id: int):
-        """Fetch only current leaders for a constituency + its county."""
+        """Fetch current leaders for a constituency and its county, including photo and party."""
         constituency = Constituency.query.get(constituency_id)
         if not constituency:
             return {}
 
         county_id = constituency.county_id
 
-        # Query current leaders: Term.end_year is NULL means ongoing
+        # Get current leaders (Term.end_year is NULL)
         terms = (
             db.session.query(Term)
             .join(Official)
             .join(Position)
             .filter(Term.end_year.is_(None))
             .filter(
-                (Term.constituency_id == constituency_id)
-                | (Term.county_id == county_id)
+                (Term.constituency_id == constituency_id) |
+                (Term.county_id == county_id)
             )
             .all()
-        )
+       )
 
         leaders = {}
         for t in terms:
             pos_name = t.position.name.lower()
+            leader_info = {
+                "name": t.official.name,
+                "photo_url": t.official.photo_url,
+                "party": t.party.name if t.party else None
+            }
+
             if "governor" in pos_name and "deputy" not in pos_name:
-                leaders["governor"] = t.official.name
+                leaders["governor"] = leader_info
             elif "deputy governor" in pos_name or "dep governor" in pos_name:
-                leaders["dep_governor"] = t.official.name
+                leaders["dep_governor"] = leader_info
             elif "senator" in pos_name:
-                leaders["senator"] = t.official.name
+                leaders["senator"] = leader_info
             elif "women rep" in pos_name or "woman representative" in pos_name:
-                leaders["women_rep"] = t.official.name
+                leaders["women_rep"] = leader_info
             elif pos_name == "mp" or "member of parliament" in pos_name:
-                leaders["mp"] = t.official.name
+                leaders["mp"] = leader_info
 
         return leaders
