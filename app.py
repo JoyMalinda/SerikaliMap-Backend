@@ -10,6 +10,7 @@ from models import db
 from urllib.parse import quote_plus
 
 from resources.location_search import LocationLookup
+from resources.maps import CountiesMap, CountyDetailMap, ConstituenciesMap
 from resources.presidents import PresidentsResource
 
 load_dotenv()
@@ -43,6 +44,11 @@ def index():
 
 api.add_resource(LocationLookup, "/location_search")
 api.add_resource(PresidentsResource, "/presidents")
+
+api.add_resource(CountiesMap, "/maps/counties")
+api.add_resource(CountyDetailMap, "/maps/counties/<int:county_id>")
+api.add_resource(ConstituenciesMap, "/maps/constituencies")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
