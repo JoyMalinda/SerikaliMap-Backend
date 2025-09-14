@@ -369,10 +369,17 @@ with app.app_context():
             county_obj = county_by_name.get(county_name.strip().upper())
             if county_obj:
                 county_id = county_obj.id
-        if constituency_name:
-            constituency_obj = constituency_by_name.get(constituency_name.strip().upper())
-            if constituency_obj:
-                constituency_id = constituency_obj.id
+
+                if constituency_name:
+                    # Look up constituency but also validate county match
+                    possible_constituency = constituency_by_name.get(constituency_name.strip().upper())
+                    if possible_constituency and possible_constituency.county_id == county_id:
+                        constituency_id = possible_constituency.id
+                    else:
+                        print(
+                            f"Warning: constituency '{constituency_name}' not found in county '{county_name}' "
+                            f"for {official_obj.name}"
+                       )
 
         # Create the term
         term = Term(
@@ -440,7 +447,7 @@ with app.app_context():
             county_name = row.get('county', '').strip()
             name = row.get('name', '').strip()
             gender = row.get('gender', '').strip().lower()
-            photo = row.get('photo_url', '').strip()
+            photo = row.get('image_url', '').strip()
 
             county = County.query.filter(
                 County.name.ilike(county_name)

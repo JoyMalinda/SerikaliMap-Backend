@@ -16,7 +16,7 @@ def get_leader_by_position(position_name, county_id=None, constituency_id=None):
     q = (
         db.session.query(Term, Official, Party, Position)
         .join(Official, Term.official_id == Official.id)
-        .join(Party, Term.party_id == Party.id)
+        .outerjoin(Party, Term.party_id == Party.id)  # <-- outer join instead of inner
         .join(Position, Term.position_id == Position.id)
         .filter(Position.name.ilike(position_name))
     )
@@ -31,15 +31,20 @@ def get_leader_by_position(position_name, county_id=None, constituency_id=None):
         return None
 
     t, official, party, position = term
+    if party and party.abbreviation:
+        abbrev = party.abbreviation.split(",")[0].strip()
+        abbrv = abbrev.replace("{", "").replace("}", "")
+    else:
+        abbrv = "Independent"
+
     return {
         "name": official.name,
         "gender": official.gender,
         "photo_url": official.photo_url,
         "position": position.name,
         "party": {
-            "name": party.name,
-            "abbreviation": party.abbreviation,
-            "colors": party.colors,
+            "name": party.name if party else "Independent",
+            "abbreviation": abbrv,
         },
         "term": f"{t.start_year}-{t.end_year or 'present'}",
     }
