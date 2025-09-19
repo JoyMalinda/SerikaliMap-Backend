@@ -12,6 +12,7 @@ from urllib.parse import quote_plus
 from resources.location_search import LocationLookup
 from resources.maps import CountiesMap, CountyDetailMap, ConstituenciesMap
 from resources.presidents import PresidentsResource
+from resources.leaders import CountyOfficialsResource, CountyMPsResource
 
 load_dotenv()
 
@@ -43,7 +44,10 @@ def index():
 
 
 api.add_resource(LocationLookup, "/location_search")
+
 api.add_resource(PresidentsResource, "/presidents")
+api.add_resource(CountyOfficialsResource, "/counties/officials/<int:county_id>")
+api.add_resource(CountyMPsResource, "/counties/mps/<int:county_id>")
 
 api.add_resource(CountiesMap, "/maps/counties")
 api.add_resource(CountyDetailMap, "/maps/counties/<int:county_id>")
