@@ -1,48 +1,48 @@
 name,county,party,gender,image_url
-AbdullSwamad Shariff Nassir,Mombasa,ODM,male,images/governors/Mombasa_H.E._Hon._AbdullSwamad_Shariff_Nassir.jpg
-Fatuma Mohamed Achani,Kwale,UDA,female,images/governors/Kwale_H.E_Fatuma_Mohamed_Achani.jpg
-"Gideon Maitha Mung’aro, OGW",Kilifi,ODM,male,images/governors/Kilifi_H.E_Gideon_Maitha_Mungaro_OGW.jpg
-Maj. (Rtd) Dr. Dhadho Gaddae Godhana,Tana River,ODM,male,images/governors/Tana_River_H.E_Maj._Rtd_Dr._Dhadho_Gaddae_Godhana.jpg
-"Issa Abdalla Timamy, EGH",Lamu,ANC,male,images/governors/Lamu_H.E_Issa_Abdalla_Timamy_EGH.jpg
-Dr. Andrew Mwadime,Taita–Taveta,Independent,male,images/governors/TaitaTaveta_H.E_Dr._Andrew_Mwadime.jpg
-"Nathif Adam Jama, EGH",Garissa,ODM,male,images/governors/Garissa_H.E_Nathif_Adam_Jama_EGH.jpg
-"FCPA Ahmed Abdullahi, EGH",Wajir,ODM,male,images/governors/Wajir_H.E_FCPA_Ahmed_Abdullahi_EGH.jpg
-"Mohamed Adan Khalif, EGH",Mandera,UDM,male,images/governors/Mandera_H.E_Mohamed_Adan_Khalif_EGH.jpg
-"Mohamud Mohamed Ali, EGH",Marsabit,ODM,male,images/governors/Marsabit_H.E_Mohamud_Mohamed_Ali_EGH.jpg
-"Abdi Ibrahim Hassan, EGH",Isiolo,Jubilee,male,images/governors/Isiolo_H.E_Abdi_Ibrahim_Hassan_EGH.jpg
-"Isaac Mutuma M’ethingia",Meru,Independent,male,images/governors/Meru_H.E_Isaac_Mutuma_Methingia.jpg
-"Muthomi Njuki, EGH",Tharaka-Nithi,UDA,male,images/governors/TharakaNithi_H.E_Hon._Muthomi_Njuki_EGH.jpg
-"Cecily Mutitu Mbarire, EGH, MGH",Embu,UDA,female,images/governors/Embu_H.E_Cecily_Mutitu_Mbarire_EGH_MGH.jpg
-"Dr. Julius Makau Malombe, EGH",Kitui,Wiper,male,images/governors/Kitui_H.E_Dr._Julius_Makau_Malombe_EGH.jpg
+AbdullSwamad Shariff Nassir,Mombasa,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Mombasa_H.E._Hon._AbdullSwamad_Shariff_Nassir.webp
+Fatuma Mohamed Achani,Kwale,UDA,female,https://f003.backblazeb2.com/file/serikali-images/governors/Kwale_H.E_Fatuma_Mohamed_Achani.webp
+"Gideon Maitha Mung’aro, OGW",Kilifi,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kilifi_H.E_Gideon_Maitha_Mungaro_OGW.webp
+Maj. (Rtd) Dr. Dhadho Gaddae Godhana,Tana River,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Tana_River_H.E_Maj._Rtd_Dr._Dhadho_Gaddae_Godhana.webp
+"Issa Abdalla Timamy, EGH",Lamu,ANC,male,https://f003.backblazeb2.com/file/serikali-images/governors/Lamu_H.E_Issa_Abdalla_Timamy_EGH.webp
+Dr. Andrew Mwadime,Taita–Taveta,Independent,male,https://f003.backblazeb2.com/file/serikali-images/governors/TaitaTaveta_H.E_Dr._Andrew_Mwadime.webp
+"Nathif Adam Jama, EGH",Garissa,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Garissa_H.E_Nathif_Adam_Jama_EGH.webp
+"FCPA Ahmed Abdullahi, EGH",Wajir,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Wajir_H.E_FCPA_Ahmed_Abdullahi_EGH.webp
+"Mohamed Adan Khalif, EGH",Mandera,UDM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Mandera_H.E_Mohamed_Adan_Khalif_EGH.webp
+"Mohamud Mohamed Ali, EGH",Marsabit,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Marsabit_H.E_Mohamud_Mohamed_Ali_EGH.webp
+"Abdi Ibrahim Hassan, EGH",Isiolo,Jubilee,male,https://f003.backblazeb2.com/file/serikali-images/governors/Isiolo_H.E_Abdi_Ibrahim_Hassan_EGH.webp
+"Isaac Mutuma M’ethingia",Meru,Independent,male,https://f003.backblazeb2.com/file/serikali-images/governors/Meru_H.E_Isaac_Mutuma_Methingia.webp
+"Muthomi Njuki, EGH",Tharaka-Nithi,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/TharakaNithi_H.E_Hon._Muthomi_Njuki_EGH.webp
+"Cecily Mutitu Mbarire, EGH, MGH",Embu,UDA,female,https://f003.backblazeb2.com/file/serikali-images/governors/Embu_H.E_Cecily_Mutitu_Mbarire_EGH_MGH.webp
+"Dr. Julius Makau Malombe, EGH",Kitui,Wiper,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kitui_H.E_Dr._Julius_Makau_Malombe_EGH.webp
 "Wavinya Ndeti, EGH",Machakos,Wiper,female,https://f003.backblazeb2.com/file/serikali-images/governors/Machakos_H.E_Wavinya_Ndeti_EGH.webp
-"Mutula Kilonzo JR, CBS",Makueni,Wiper,male,images/governors/Makueni_H.E_Mutula_Kilonzo_JR_CBS.jpg
-Dr. Moses Ndirangu Kiarie Badilisha,Nyandarua,UDA,male,images/governors/Nyandarua_H.E_Dr._Moses_Ndirangu_Kiarie_Badilisha.jpg
-"Dr. Edward Mutahi Kahiga, EGH",Nyeri,UDA,male,images/governors/Nyeri_H.E_Dr._Edward_Mutahi_Kahiga_EGH.jpg
-"Anne Mumbi Waiguru, EGH, OGW",Kirinyaga,UDA,female,images/governors/Kirinyaga_H.E_Anne_Mumbi_Waiguru_EGH_OGW.jpg
-"Dr. Irungu Kangata, CBS",Murang’a,UDA,male,images/governors/Muranga_H.E_Dr._Irungu_Kangata_CBS.jpg
-"Dr. Paul Kimani Wamatangi, EGH",Kiambu,UDA,male,images/governors/Kiambu_H.E_Dr._Paul_Kimani_Wamatangi_EGH.jpg
-Jeremiah Ekamais Lomorukai,Turkana,ODM,male,images/governors/Turkana_H.E_Jeremiah_Ekamais_Lomorukai.jpg
-"Simon Kachapin Kitalei, EGH, CBS",West Pokot,UDA,male,images/governors/West_Pokot_H.E_Simon_Kachapin_Kitalei_EGH_CBS.jpg
-Jonathan Lelelit Lati,Samburu,UDA,male,images/governors/Samburu_H.E_Jonathan_Lelelit_Lati.jpg
-George Natembeya MBS,Trans-Nzoia,DAP-K,male,images/governors/Trans_Nzoia_H.E_Hon._George_Natembeya_MBS.jpg
-"Jonathan Bii, EGH",Uasin Gishu,UDA,male,images/governors/Uasin_Gishu_H.E_Jonathan_Bii_EGH.jpg
-Wisley Rotich,Elgeyo-Marakwet,UDA,male,images/governors/ElgeyoMarakwet_H.E_Wisley_Rotich.jpg
-"Stephen Kipyego Sang, EGH",Nandi,UDA,male,images/governors/Nandi_H.E_Stephen_Kipyego_Sang_EGH.jpg
-"Benjamin Chesire Cheboi, EGH, EBS",Baringo,UDA,male,images/governors/Baringo_H.E_Benjamin_Chesire_Cheboi_EGH_EBS.jpg
-"Joshua Wakahora Irungu, EGH",Laikipia,UDA,male,images/governors/Laikipia_H.E_Joshua_Wakahora_Irungu_EGH.jpg
-"Susan Wakarura Kihika, EGH",Nakuru,UDA,female,images/governors/Nakuru_H.E_Susan_Wakarura_Kihika_EGH.jpg
-Patrick Keturet Ole Ntutu,Narok,UDA,male,images/governors/Narok_H.E_Patrick_Keturet_Ole_Ntutu.jpg
-"Joseph Jama Ole Lenku, EGH",Kajiado,ODM,male,images/governors/Kajiado_H.E_Joseph_Jama_Ole_Lenku_EGH.jpg
-Dr. Erick Kipkoech Mutai,Kericho,UDA,male,images/governors/Kericho_H.E_Dr._Erick_Kipkoech_Mutai.jpg
-"Prof. Hillary K Barchok, EGH",Bomet,UDA,male,images/governors/Bomet_H.E_Hon._Prof._Hillary_K_Barchok_EGH.jpg
-"FCPA Fernandes Barasa, OGW",Kakamega,ODM,male,images/governors/Kakamega_H.E_FCPA_Fernandes_Barasa_OGW.jpg
-"Dr. Wilber Khasilwa Ottichilo, EGH",Vihiga,ODM,male,images/governors/Vihiga_H.E_Hon._Dr._Wilber_Khasilwa_Ottichilo_EGH.jpg
-"Kenneth Makelo Lusaka, EGH",Bungoma,Ford-K,male,images/governors/Bungoma_H.E_Kenneth_Makelo_Lusaka_EGH.jpg
-"Dr. Paul Nyongesa Otuoma, EGH",Busia,ODM,male,images/governors/Busia_H.E_Dr._Paul_Nyongesa_Otuoma_EGH.jpg
-"James Orengo, EGH",Siaya,ODM,male,images/governors/Siaya_H.E_James_Orengo_EGH.jpg
-"Prof. Peter Anyang’ Nyong’o, EGH",Kisumu,ODM,male,images/governors/Kisumu_H.E_Hon._Prof._Peter_Anyang_Nyongo_EGH.jpg
+"Mutula Kilonzo JR, CBS",Makueni,Wiper,male,https://f003.backblazeb2.com/file/serikali-images/governors/Makueni_H.E_Mutula_Kilonzo_JR_CBS.webp
+Dr. Moses Ndirangu Kiarie Badilisha,Nyandarua,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Nyandarua_H.E_Dr._Moses_Ndirangu_Kiarie_Badilisha.webp
+"Dr. Edward Mutahi Kahiga, EGH",Nyeri,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Nyeri_H.E_Dr._Edward_Mutahi_Kahiga_EGH.webp
+"Anne Mumbi Waiguru, EGH, OGW",Kirinyaga,UDA,female,https://f003.backblazeb2.com/file/serikali-images/governors/Kirinyaga_H.E_Anne_Mumbi_Waiguru_EGH_OGW.webp
+"Dr. Irungu Kangata, CBS",Murang’a,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Muranga_H.E_Dr._Irungu_Kangata_CBS.webp
+"Dr. Paul Kimani Wamatangi, EGH",Kiambu,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kiambu_H.E_Dr._Paul_Kimani_Wamatangi_EGH.webp
+Jeremiah Ekamais Lomorukai,Turkana,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Turkana_H.E_Jeremiah_Ekamais_Lomorukai.webp
+"Simon Kachapin Kitalei, EGH, CBS",West Pokot,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/West_Pokot_H.E_Simon_Kachapin_Kitalei_EGH_CBS.webp
+Jonathan Lelelit Lati,Samburu,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Samburu_H.E_Jonathan_Lelelit_Lati.webp
+George Natembeya MBS,Trans-Nzoia,DAP-K,male,https://f003.backblazeb2.com/file/serikali-images/governors/Trans_Nzoia_H.E_Hon._George_Natembeya_MBS.webp
+"Jonathan Bii, EGH",Uasin Gishu,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Uasin_Gishu_H.E_Jonathan_Bii_EGH.webp
+Wisley Rotich,Elgeyo-Marakwet,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/ElgeyoMarakwet_H.E_Wisley_Rotich.webp
+"Stephen Kipyego Sang, EGH",Nandi,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Nandi_H.E_Stephen_Kipyego_Sang_EGH.webp
+"Benjamin Chesire Cheboi, EGH, EBS",Baringo,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Baringo_H.E_Benjamin_Chesire_Cheboi_EGH_EBS.webp
+"Joshua Wakahora Irungu, EGH",Laikipia,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Laikipia_H.E_Joshua_Wakahora_Irungu_EGH.webp
+"Susan Wakarura Kihika, EGH",Nakuru,UDA,female,https://f003.backblazeb2.com/file/serikali-images/governors/Nakuru_H.E_Susan_Wakarura_Kihika_EGH.webp
+Patrick Keturet Ole Ntutu,Narok,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Narok_H.E_Patrick_Keturet_Ole_Ntutu.webp
+"Joseph Jama Ole Lenku, EGH",Kajiado,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kajiado_H.E_Joseph_Jama_Ole_Lenku_EGH.webp
+Dr. Erick Kipkoech Mutai,Kericho,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kericho_H.E_Dr._Erick_Kipkoech_Mutai.webp
+"Prof. Hillary K Barchok, EGH",Bomet,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Bomet_H.E_Hon._Prof._Hillary_K_Barchok_EGH.webp
+"FCPA Fernandes Barasa, OGW",Kakamega,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kakamega_H.E_FCPA_Fernandes_Barasa_OGW.webp
+"Dr. Wilber Khasilwa Ottichilo, EGH",Vihiga,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Vihiga_H.E_Hon._Dr._Wilber_Khasilwa_Ottichilo_EGH.webp
+"Kenneth Makelo Lusaka, EGH",Bungoma,Ford-K,male,https://f003.backblazeb2.com/file/serikali-images/governors/Bungoma_H.E_Kenneth_Makelo_Lusaka_EGH.webp
+"Dr. Paul Nyongesa Otuoma, EGH",Busia,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Busia_H.E_Dr._Paul_Nyongesa_Otuoma_EGH.webp
+"James Orengo, EGH",Siaya,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Siaya_H.E_James_Orengo_EGH.webp
+"Prof. Peter Anyang’ Nyong’o, EGH",Kisumu,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kisumu_H.E_Hon._Prof._Peter_Anyang_Nyongo_EGH.webp
 "Gladys Atieno Nyasuna Wanga, EGH, CBS",Homa Bay,ODM,female,https://f003.backblazeb2.com/file/serikali-images/governors/Homa_Bay_H.E_Gladys_Atieno_Nyasuna_Wanga_EGH_CBS.webp
-"Dr. George Ochilo M. Ayacko, EGH",Migori,ODM,male,images/governors/Migori_H.E_Dr._George_Ochilo_M._Ayacko_EGH.jpg
-Paul Simba Arati,Kisii,ODM,male,images/governors/Kisii_H.E_Hon._Paul_Simba_Arati.jpg
-Amos Kimwomi Nyaribo,Nyamira,UPA,male,images/governors/Nyamira_H.E_Amos_Kimwomi_Nyaribo.jpg
-"Sakaja Arthur Johnson, EGH , CBS",Nairobi,UDA,male,images/governors/Nairobi_H.E_Sakaja_Arthur_Johnson_EGH__CBS.jpg
+"Dr. George Ochilo M. Ayacko, EGH",Migori,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Migori_H.E_Dr._George_Ochilo_M._Ayacko_EGH.webp
+Paul Simba Arati,Kisii,ODM,male,https://f003.backblazeb2.com/file/serikali-images/governors/Kisii_H.E_Hon._Paul_Simba_Arati.webp
+Amos Kimwomi Nyaribo,Nyamira,UPA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Nyamira_H.E_Amos_Kimwomi_Nyaribo.webp
+"Sakaja Arthur Johnson, EGH , CBS",Nairobi,UDA,male,https://f003.backblazeb2.com/file/serikali-images/governors/Nairobi_H.E_Sakaja_Arthur_Johnson_EGH__CBS.webp
