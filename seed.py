@@ -530,6 +530,7 @@ with app.app_context():
             county = (row.get('county') or row.get('County') or '').strip()
             status = (row.get('status') or '').strip().lower()
             photo = (row.get('image_local_path') or row.get('image') or row.get('image_url') or '')
+            gender = (row.get('gender')).strip().lower()
 
             if not name:
                 continue
@@ -539,11 +540,11 @@ with app.app_context():
             # Some rows are truly empty for location; skip term creation (but still create official)
             if not any([party, constituency, county, photo]):
                 # no data to build a term from; create official only and continue
-                off = upsert_official(name=name, gender='other', photo_url=photo)
+                off = upsert_official(name=name, gender=gender, photo_url=photo)
                 print('Created official without term (insufficient location/party data):', name)
                 continue
 
-            off = upsert_official(name=name, gender='other', photo_url=photo)
+            off = upsert_official(name=name, gender=gender, photo_url=photo)
             # For nominated MPs, constituency/county could be blank; still create term with nulls
             constituency_name = None if constituency.strip() == '' else constituency
             county_name = None if county.strip() == '' else county
