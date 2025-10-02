@@ -71,6 +71,11 @@ class CountyMPsResource(Resource):
 
         results = []
         for term in terms:
+            if term.party and term.party.abbreviation:
+                abbrev = term.party.abbreviation.split(",")[0].strip()
+                abbrv = abbrev.replace("{", "").replace("}", "")
+            else:
+                abbrv = "Independent"
             results.append({
                 "official": {
                     "id": term.official.id,
@@ -86,7 +91,7 @@ class CountyMPsResource(Resource):
                 "party": {
                     "id": term.party.id if term.party else None,
                     "name": term.party.name if term.party else None,
-                    "abbreviation": term.party.abbreviation if term.party else None,
+                    "abbreviation": abbrv,
                 } if term.party else None,
                 "term": {
                     "id": term.id,
@@ -109,9 +114,12 @@ class CountyMPsResource(Resource):
 
 def party_key(party):
     """Helper to normalize party data (handles independent)."""
-    if party:
-        return party.name, party.abbreviation
-    return "Independent", "IND"
+    if party :
+        abbrev = party.abbreviation.split(",")[0].strip()
+        abbrv = abbrev.replace("{", "").replace("}", "")
+    else:
+        abbrv = "Independent"
+    return (party.name if party else "Independent", abbrv)
 
 
 class AllCountyOfficials(Resource):
@@ -135,6 +143,12 @@ class AllCountyOfficials(Resource):
             if not term.county:
                 continue
 
+            if term.party and term.party.abbreviation:
+                abbrev = term.party.abbreviation.split(",")[0].strip()
+                abbrv = abbrev.replace("{", "").replace("}", "")
+            else:
+                abbrv = "Independent"
+
             # Build official info
             official_info = {
                 "id": term.official.id,
@@ -145,7 +159,7 @@ class AllCountyOfficials(Resource):
                 "county": term.county.name,
                 "party": {
                     "name": term.party.name if term.party else "Independent",
-                    "abbrev": term.party.abbreviation if term.party else "IND",
+                    "abbrev": abbrv,
                 },
                 "start_year": term.start_year,
                 "end_year": term.end_year,

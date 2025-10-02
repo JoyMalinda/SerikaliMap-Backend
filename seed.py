@@ -138,7 +138,7 @@ with app.app_context():
         { 'name': 'Governor', 'level': 'county' },
         { 'name': 'Deputy Governor', 'level': 'county' },
         { 'name': 'Senator', 'level': 'county' },
-        { 'name': 'Women Rep', 'level': 'county' },
+        { 'name': 'Women Representative', 'level': 'county' },
         { 'name': 'MP', 'level': 'constituency' },
         { 'name': 'President', 'level': 'national' },
         { 'name': 'Vice President', 'level': 'national' },
@@ -517,7 +517,7 @@ with app.app_context():
             if not name:
                 continue
             off = upsert_official(name=name, gender='female', photo_url=photo)
-            create_term_for_official(off, 'Women Rep', party_abbr=party, county_name=county)
+            create_term_for_official(off, 'Women Representative', party_abbr=party, county_name=county)
     db.session.commit()
 
     # --- MPs ---
