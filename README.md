@@ -10,7 +10,7 @@ pipenv shell
 
 ### Database
 ```psql
-CREATE TABLE serikali
+psql -U postgres -d serikali
 ```
 
 ```bash
