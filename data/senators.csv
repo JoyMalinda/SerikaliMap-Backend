@@ -1,66 +1,66 @@
 name,county,party,status,gender,local_image_path
-Sifuna Edwin Watenya,Nairobi,ODM,Elected,male,images/senators/Sifuna_Edwin_Watenya.jpg
-(Dr.) Khalwale Boni,Kakamega,UDA,Elected,male,images/senators/(Dr.)_Khalwale_Boni.jpg
-"(Rtd) Justice Stewart Madzayo, CBS, MP",Kilifi,ODM,Elected,male,"images/senators/(Rtd)_Justice_Stewart_Madzayo,_CBS,_MP.jpg"
-Abdalla Shakilla Mohamed,Nominated,WDM,Nominated,female,images/senators/Abdalla_Shakilla_Mohamed.jpg
-Beatrice Akinyi Ogolla,Nominated,ODM,Nominated,female,images/senators/Beatrice_Akinyi_Ogolla.jpg
-Beth Kalunda Syengo,Nominated,ODM,Nominated,female,images/senators/Beth_Kalunda_Syengo.jpg
-Betty Batuli Montet,Nominated,ODM,Nominated,female,images/senators/Betty_Batuli_Montet.jpeg
-Boy Issa Juma,Kwale,ODM,Elected,male,images/senators/Boy_Issa_Juma.png
-Catherine Muyeka Mumma,Nominated,ODM,Nominated,female,images/senators/Catherine_Muyeka_Mumma.jpg
-Cherarkey Samson K,Nandi,UDA,Elected,male,images/senators/Cherarkey_Samson_K.jpg
-Cheruiyot Aaron Kipkirui,Kericho,UDA,Elected,male,images/senators/Cheruiyot_Aaron_Kipkirui.jpg
-"Chesang Allan Kiprotich, CBS",Trans Nzoia,UDA,Elected,male,"images/senators/Chesang_Allan_Kiprotich,_CBS.jpg"
-Chimera Raphael Mwinzago,Nominated,UDA,Nominated,male,images/senators/Chimera_Raphael_Mwinzago.jpg
-Chute Mohamed Said,Marsabit,UDA,Elected,male,images/senators/Chute_Mohamed_Said.jpg
-Crystal Asige,Nominated,ODM,Nominated,female,images/senators/Crystal_Asige.jpg
-David Wakoli Wafula,Bungoma County,Ford-K,Elected,male,images/senators/David_Wakoli_Wafula.jpg
-Dullo Fatuma Adan,Isiolo,JP,Elected,female,images/senators/Dullo_Fatuma_Adan.jpg
-Ekomwa James Lomenen,Turkana,JP,Elected,male,images/senators/Ekomwa_James_Lomenen.jpg
-Esther Anyieni Okenyuri,Nominated,UDA,Nominated,female,images/senators/Esther_Anyieni_Okenyuri.jpg
-Faki Mohamed Mwinyihaji,Mombasa,ODM,Elected,male,images/senators/Faki_Mohamed_Mwinyihaji.jpg
-George Mungai Mbugua,Nominated,UDA,Nominated,male,images/senators/George_Mungai_Mbugua.jpg
-Haji Abdul Mohammed,Garissa,JP,Elected,male,images/senators/Haji_Abdul_Mohammed.jpg
-Hamida Ali Kibwana,Nominated,ODM,Nominated,female,images/senators/Hamida_Ali_Kibwana.jpeg
-Hezena M. Lemaletian,Nominated,ODM,Nominated,female,images/senators/Hezena_M._Lemaletian.jpg
-Joe Nyutu,Muranga,UDA,Elected,male,images/senators/Joe_Nyutu.png
-Joyce Chepkoech Korir,Nominated,UDA,Nominated,female,images/senators/Joyce_Chepkoech_Korir.jpg
+Sifuna Edwin Watenya,Nairobi,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Sifuna_Edwin_Watenya.webp
+(Dr.) Khalwale Boni,Kakamega,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/(Dr.)_Khalwale_Boni.webp
+"(Rtd) Justice Stewart Madzayo, CBS, MP",Kilifi,ODM,Elected,male,"https://f003.backblazeb2.com/file/serikali-images/senators/(Rtd)_Justice_Stewart_Madzayo%2C_CBS%2C_MP.webp"
+Abdalla Shakilla Mohamed,Nominated,WDM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Abdalla_Shakilla_Mohamed.webp
+Beatrice Akinyi Ogolla,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Beatrice_Akinyi_Ogolla.webp
+Beth Kalunda Syengo,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Beth_Kalunda_Syengo.webp
+Betty Batuli Montet,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Betty_Batuli_Montet.jpeg
+Boy Issa Juma,Kwale,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Boy_Issa_Juma.png
+Catherine Muyeka Mumma,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Catherine_Muyeka_Mumma.webp
+Cherarkey Samson K,Nandi,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Cherarkey_Samson_K.webp
+Cheruiyot Aaron Kipkirui,Kericho,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Cheruiyot_Aaron_Kipkirui.webp
+"Chesang Allan Kiprotich, CBS",Trans-Nzoia,UDA,Elected,male,"https://f003.backblazeb2.com/file/serikali-images/senators/Chesang_Allan_Kiprotich%2C_CBS.webp"
+Chimera Raphael Mwinzago,Nominated,UDA,Nominated,male,https://f003.backblazeb2.com/file/serikali-images/senators/Chimera_Raphael_Mwinzago.webp
+Chute Mohamed Said,Marsabit,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Chute_Mohamed_Said.webp
+Crystal Asige,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Crystal_Asige.webp
+David Wakoli Wafula,Bungoma,Ford-K,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/David_Wakoli_Wafula.webp
+Dullo Fatuma Adan,Isiolo,JP,Elected,female,https://f003.backblazeb2.com/file/serikali-images/senators/Dullo_Fatuma_Adan.webp
+Ekomwa James Lomenen,Turkana,JP,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Ekomwa_James_Lomenen.webp
+Esther Anyieni Okenyuri,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Esther_Anyieni_Okenyuri.webp
+Faki Mohamed Mwinyihaji,Mombasa,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Faki_Mohamed_Mwinyihaji.webp
+George Mungai Mbugua,Nominated,UDA,Nominated,male,https://f003.backblazeb2.com/file/serikali-images/senators/George_Mungai_Mbugua.webp
+Haji Abdul Mohammed,Garissa,JP,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Haji_Abdul_Mohammed.webp
+Hamida Ali Kibwana,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Hamida_Ali_Kibwana.jpeg
+Hezena M. Lemaletian,Nominated,ODM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Hezena_M._Lemaletian.webp
+Joe Nyutu,Murang'a,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Joe_Nyutu.png
+Joyce Chepkoech Korir,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Joyce_Chepkoech_Korir.webp
 Kajwang' Moses Otieno,Homa Bay,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Kajwang'_Moses_Otieno.webp
-Kamau Joseph Githuku,Lamu,JP,Elected,male,images/senators/Kamau_Joseph_Githuku.jpg
-Karungo Paul Thangwa,Kiambu,UDA,Elected,male,images/senators/Karungo_Paul_Thangwa.jpg
-Keroche Tabitha Karanja,Nakuru,UDA,Elected,female,images/senators/Keroche_Tabitha_Karanja.jpg
-Kiplagat Jackson Mandago,Uasin Gishu,UDA,Elected,male,images/senators/Kiplagat_Jackson_Mandago.jpg
-Kisang William Kipkemoi,Elgeyo Marakwet,UDA,Elected,male,images/senators/Kisang_William_Kipkemoi.jpg
-Lelegwe Steve Ltumbesi,Samburu,UDA,Elected,male,images/senators/Lelegwe_Steve_Ltumbesi.png
-Maanzo Daniel Kitonga,Makueni,WDM,Elected,male,images/senators/Maanzo_Daniel_Kitonga.jpg
-Methu John Muhia,Nyandarua,UDA,Elected,male,images/senators/Methu_John_Muhia.jpg
-Miraj Abdillahi Abdulrahman,Nominated,UDA,Nominated,female,images/senators/Miraj_Abdillahi_Abdulrahman.jpeg
-Mogeni Erick Okongo,Nyamira,ODM,Elected,male,images/senators/Mogeni_Erick_Okongo.jpg
-Mohamed Abass Sheikh,Wajir,UDM,Elected,male,images/senators/Mohamed_Abass_Sheikh.jpeg
-Mungatana Danson Buya,Tana River,UDA,Elected,male,images/senators/Mungatana_Danson_Buya.jpg
-Munyi Alexander Mundigi,Embu,DP,Elected,male,images/senators/Munyi_Alexander_Mundigi.jpg
-Murango James Kamau,Kirinyaga,UDA,Elected,male,images/senators/Murango_James_Kamau.jpg
-Murungi Kathuri,Meru,UDA,Elected,male,images/senators/Murungi_Kathuri.jpg
+Kamau Joseph Githuku,Lamu,JP,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Kamau_Joseph_Githuku.webp
+Karungo Paul Thangwa,Kiambu,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Karungo_Paul_Thangwa.webp
+Keroche Tabitha Karanja,Nakuru,UDA,Elected,female,https://f003.backblazeb2.com/file/serikali-images/senators/Keroche_Tabitha_Karanja.webp
+Kiplagat Jackson Mandago,Uasin Gishu,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Kiplagat_Jackson_Mandago.webp
+Kisang William Kipkemoi,Elgeyo-Marakwet,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Kisang_William_Kipkemoi.webp
+Lelegwe Steve Ltumbesi,Samburu,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Lelegwe_Steve_Ltumbesi.png
+Maanzo Daniel Kitonga,Makueni,WDM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Maanzo_Daniel_Kitonga.webp
+Methu John Muhia,Nyandarua,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Methu_John_Muhia.webp
+Miraj Abdillahi Abdulrahman,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Miraj_Abdillahi_Abdulrahman.jpeg
+Mogeni Erick Okongo,Nyamira,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Mogeni_Erick_Okongo.webp
+Mohamed Abass Sheikh,Wajir,UDM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Mohamed_Abass_Sheikh.jpeg
+Mungatana Danson Buya,Tana River,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Mungatana_Danson_Buya.webp
+Munyi Alexander Mundigi,Embu,DP,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Munyi_Alexander_Mundigi.webp
+Murango James Kamau,Kirinyaga,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Murango_James_Kamau.webp
+Murungi Kathuri,Meru,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Murungi_Kathuri.webp
 Muthama Agnes Kavindu Mbuku,Machakos,WDM,Elected,female,https://f003.backblazeb2.com/file/serikali-images/senators/Muthama_Agnes_Kavindu_Mbuku.webp
-Mutinda Maureen Tabitha,Nominated,UDA,Nominated,female,images/senators/Mutinda_Maureen_Tabitha.jpg
-Mwaruma Johnes M,Taita Taveta,ODM,Elected,male,images/senators/Mwaruma_Johnes_M.jpg
-Mwenda Gataya Mo Fire,Tharaka Nithi,UDA,Elected,male,images/senators/Mwenda_Gataya_Mo_Fire.jpg
-Nderitu John Kinyua,Laikipia,UDA,Elected,male,images/senators/Nderitu_John_Kinyua.png
-Nyamu Karen Njeri,Nominated,UDA,Nominated,female,images/senators/Nyamu_Karen_Njeri.png
-Oginga Oburu,Siaya,ODM,Elected,male,images/senators/Oginga_Oburu.jpg
-Oketch Eddy Gicheru,Migori,ODM,Elected,male,images/senators/Oketch_Eddy_Gicheru.jpg
-Okoiti Andrew Omtatah,Busia,NRA,Elected,male,images/senators/Okoiti_Andrew_Omtatah.jpg
-Olekina Ledama,Narok,ODM,Elected,male,images/senators/Olekina_Ledama.jpg
-Omar Mariam Sheikh,Nominated,UDM,Nominated,female,images/senators/Omar_Mariam_Sheikh.jpg
-Onyonka Richard Momoima,Kisii,ODM,Elected,male,images/senators/Onyonka_Richard_Momoima.jpg
-Osotsi Godfrey Atieno,Vihiga,ODM,Elected,male,images/senators/Osotsi_Godfrey_Atieno.jpeg
-Pesi Peris Tobiko,Nominated,UDA,Nominated,female,images/senators/Pesi_Peris_Tobiko.jpg
-Prof. Margaret Jepkoech Kamar,Nominated,JP,Nominated,female,images/senators/Prof._Margaret_Jepkoech_Kamar.jpg
-"Prof. Tom Odhiambo Ojienda, SC, MP",Kisumu,ODM,Elected,male,"images/senators/Prof._Tom_Odhiambo_Ojienda,_SC,_MP.jpg"
-Recha Julius Murgor,West Pokot,UDA,Elected,male,images/senators/Recha_Julius_Murgor.jpg
-Roba Ali Ibrahim,Mandera,UDM,Elected,male,images/senators/Roba_Ali_Ibrahim.jpg
-Seki Lenku Ole Kanar,Kajiado,UDA,Elected,male,images/senators/Seki_Lenku_Ole_Kanar.jpg
-Veronica Waheti Nduati,Nominated,UDA,Nominated,female,images/senators/Veronica_Waheti_Nduati.jpg
-Wakili Hillary Kiprotich Sigei,Bomet,UDA,Elected,male,images/senators/Wakili_Hillary_Kiprotich_Sigei.jpg
-Wamatinga Wahome,Nyeri,UDA,Elected,male,images/senators/Wamatinga_Wahome.jpg
-Wambua Enoch Kiio,Kitui,WDM,Elected,male,images/senators/Wambua_Enoch_Kiio.jpg
+Mutinda Maureen Tabitha,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Mutinda_Maureen_Tabitha.webp
+Mwaruma Johnes M,Taita Taveta,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Mwaruma_Johnes_M.webp
+Mwenda Gataya Mo Fire,Tharaka-Nithi,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Mwenda_Gataya_Mo_Fire.webp
+Nderitu John Kinyua,Laikipia,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Nderitu_John_Kinyua.png
+Nyamu Karen Njeri,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Nyamu_Karen_Njeri.png
+Oginga Oburu,Siaya,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Oginga_Oburu.webp
+Oketch Eddy Gicheru,Migori,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Oketch_Eddy_Gicheru.webp
+Okoiti Andrew Omtatah,Busia,NRA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Okoiti_Andrew_Omtatah.webp
+Olekina Ledama,Narok,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Olekina_Ledama.webp
+Omar Mariam Sheikh,Nominated,UDM,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Omar_Mariam_Sheikh.webp
+Onyonka Richard Momoima,Kisii,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Onyonka_Richard_Momoima.webp
+Osotsi Godfrey Atieno,Vihiga,ODM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Osotsi_Godfrey_Atieno.jpeg
+Pesi Peris Tobiko,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Pesi_Peris_Tobiko.webp
+Prof. Margaret Jepkoech Kamar,Nominated,JP,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Prof._Margaret_Jepkoech_Kamar.webp
+"Prof. Tom Odhiambo Ojienda, SC, MP",Kisumu,ODM,Elected,male,"https://f003.backblazeb2.com/file/serikali-images/senators/Prof._Tom_Odhiambo_Ojienda%2C_SC%2C_MP.webp"
+Recha Julius Murgor,West Pokot,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Recha_Julius_Murgor.webp
+Roba Ali Ibrahim,Mandera,UDM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Roba_Ali_Ibrahim.webp
+Seki Lenku Ole Kanar,Kajiado,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Seki_Lenku_Ole_Kanar.webp
+Veronica Waheti Nduati,Nominated,UDA,Nominated,female,https://f003.backblazeb2.com/file/serikali-images/senators/Veronica_Waheti_Nduati.webp
+Wakili Hillary Kiprotich Sigei,Bomet,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Wakili_Hillary_Kiprotich_Sigei.webp
+Wamatinga Wahome,Nyeri,UDA,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Wamatinga_Wahome.webp
+Wambua Enoch Kiio,Kitui,WDM,Elected,male,https://f003.backblazeb2.com/file/serikali-images/senators/Wambua_Enoch_Kiio.webp
