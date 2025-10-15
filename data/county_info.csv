@@ -1,3 +1,4 @@
+
 county,constituencies
 Mombasa,"['Changamwe', 'Jombu', 'Kisauni', 'Likoni', 'Mvita', 'Nyali']"
 Kwale,"['Kinango', 'Lunga Lunga', 'Matuga', 'Msambweni']"
@@ -24,7 +25,7 @@ Kiambu,"['Gatundu North', 'Gatundu South', 'Githunguri', 'Juja', 'Kabete', 'Kiam
 Turkana,"['Loima', 'Turkana Central', 'Turkana East', 'Turkana North', 'Turkana South', 'Turkana West']"
 West Pokot,"['Kacheliba', 'Kapenguria', 'Pokot South', 'Sigor']"
 Samburu,"['Samburu East', 'Samburu North', 'Samburu West']"
-Transnzoia,"['Cherangany', 'Endebess', 'Kiminini', 'Kwanza', 'Saboti']"
+Trans-nzoia,"['Cherangany', 'Endebess', 'Kiminini', 'Kwanza', 'Saboti']"
 Uasin Gishu,"['Ainabkoi', 'Kapseret', 'Kesses', 'Moiben', 'Soy', 'Turbo']"
 Elgeyo Marakwet,"['Keiyo North', 'Keiyo South', 'Marakwet East', 'Marakwet West']"
 Nandi,"['Aldai', 'Chesumei', 'Emgwen', 'Mosop', 'Nandi Hills', 'Tinderet']"
