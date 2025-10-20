@@ -79,7 +79,7 @@ class CountyDetailMap(Resource):
             "governor": get_leader_by_position("Governor", county_id=county.id),
             "deputy_governor": get_leader_by_position("Deputy Governor", county_id=county.id),
             "senator": get_leader_by_position("Senator", county_id=county.id),
-            "women_rep": get_leader_by_position("Women Rep", county_id=county.id),
+            "women_rep": get_leader_by_position("Women Representative", county_id=county.id),
         }
 
         # Constituencies + MPs
