@@ -25,7 +25,8 @@ username = os.getenv("POSTGRES_USER")
 database = os.getenv("POSTGRES_DB")
 
 # Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{username}:{encoded_password}@localhost/{database}"
+# app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{username}:{encoded_password}@localhost/{database}"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 app.config['JSON_SORT_KEYS'] = False
 

@@ -18,6 +18,7 @@ shapely = "*"
 geojson = "*"
 services = "*"
 requests = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 black = "*"
