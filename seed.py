@@ -15,17 +15,20 @@ from pathlib import Path
 from flask import Flask
 from sqlalchemy import text
 from dotenv import load_dotenv
+from colorama import init, Fore, Style
 
 from models import db, County, Constituency, Ward, Party, Official, Position, Term
 
 # try shapely for geo handling
 try:
-    from shapely.geometry import shape, mapping
+    from shapely.geometry import shape, mapping, Polygon, MultiPolygon
     from shapely.ops import unary_union
     from geoalchemy2.elements import WKTElement
     SHAPELY_AVAILABLE = True
 except Exception:
     SHAPELY_AVAILABLE = False
+
+init(autoreset=True)
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / 'data' 
@@ -51,12 +54,12 @@ FILES = {
 # DB config
 load_dotenv()
 
-DATABASE_URL = os.getenv('DATABASE_URL') or os.getenv('DATABASE_URI')
-if not DATABASE_URL:
+DATABASE_URI = os.getenv('DATABASE_URI')
+if not DATABASE_URI:
     raise RuntimeError('Please set DATABASE_URL environment variable to your Postgres/Supabase connection string')
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # utility helpers
@@ -190,12 +193,12 @@ with app.app_context():
                 geom_key = name.strip().upper()
                 if SHAPELY_AVAILABLE and geom_key in counties_geo_index:
                     geom_shape = shape(counties_geo_index[geom_key])
-                    # ensure multipolygon
-                    if geom_shape.geom_type == 'Polygon':
-                        mp = geom_shape.buffer(0)
-                    else:
-                        mp = geom_shape
-                    geom = WKTElement(mp.wkt, srid=4326)
+                    # Force conversion Polygon -> MultiPolygon
+                    if isinstance(geom_shape, Polygon):
+                        geom_shape = MultiPolygon([geom_shape])
+
+                    # If it's already a MultiPolygon, keep it
+                    geom = WKTElement(geom_shape.wkt, srid=4326)
 
                 county = County(name=name, code=code, population=population, area=area, population_density=density)
                 if geom is not None:
@@ -204,7 +207,7 @@ with app.app_context():
             except Exception as e:
                 print('Error processing county row', row, e)
     db.session.commit()
-    print('Inserted counties:', County.query.count())
+    print(f"{Fore.GREEN}Successfully inserted {County.query.count()} counties!")
 
     # Build county lookup by name (upper) and by code
     county_by_name = {c.name.strip().upper(): c for c in County.query.all()}
@@ -262,7 +265,7 @@ with app.app_context():
             if not county_obj:
                 # last resort: try user-supplied 'county' column in constituency_csv (not ideal)
                 # skip if no county found
-                print('Warning: no county found for constituency', cname, 'skipping')
+                print(f"{Fore.RED}Warning: {Fore.WHITE}no county found for constituency, {Fore.LIGHTCYAN_EX}{cname}{Fore.WHITE}, skipping")
                 continue
 
             population = None
@@ -277,12 +280,11 @@ with app.app_context():
             geom = None
             if SHAPELY_AVAILABLE:
                 geom_shape = shape(feat.get('geometry'))
-                if geom_shape.geom_type == 'Polygon':
-                    mp = geom_shape.buffer(0)
-                else:
-                    mp = geom_shape
+                if isinstance(geom_shape, Polygon):
+                    geom_shape = MultiPolygon([geom_shape])
+
                 try:
-                    geom = WKTElement(mp.wkt, srid=4326)
+                    geom = WKTElement(geom_shape.wkt, srid=4326)
                 except Exception:
                     geom = None
 
@@ -294,7 +296,7 @@ with app.app_context():
         except Exception as e:
             print('Constituency insert error', e)
     db.session.commit()
-    print('Inserted constituencies:', Constituency.query.count())
+    print(f"{Fore.GREEN}Successfully inserted {Constituency.query.count()} constituencies!")
 
     # Build lookups for constituency by name and by code
     constituency_by_name = {c.name.strip().upper(): c for c in Constituency.query.all()}
@@ -321,7 +323,7 @@ with app.app_context():
                 party_by_abbrev[ab.upper()] = party
 
     db.session.commit()
-    print('Inserted parties:', Party.query.count())
+    print(f"{Fore.GREEN}Successfully inserted {Party.query.count()} parties!")
     party_by_name = {p.name.strip().upper(): p for p in Party.query.all()}
 
     # Helper to create Official (avoid duplicates by name) and Term
@@ -349,7 +351,7 @@ with app.app_context():
     # Resolve position
         pos = pos_map.get(position_name.lower())
         if not pos:
-            print('No position', position_name, 'found; skipping term for', official_obj.name)
+            print(f"{Fore.RED}Warning: {Fore.WHITE}No position {position_name} found; skipping term for {Fore.LIGHTCYAN_EX}{official_obj.name}")
             return None
 
         # Resolve party by abbreviation
@@ -368,16 +370,9 @@ with app.app_context():
             if party_abbr and party_abbr.strip().lower() in ["independent", "ind"]:
                 party_obj = None
             else:
-                print('Warning: party not found for', official_obj.name, 'party abbr=', party_abbr)
+                print(f"{Fore.LIGHTRED_EX}Warning: {Fore.WHITE}party not found for {Fore.LIGHTCYAN_EX}{official_obj.name}{Fore.WHITE}, party abbr= {party_abbr}")
 
         # Resolve ward by code
-        ward_id = None
-        if ward_code:
-            ward_obj = ward_by_code.get(str(ward_code))
-            if ward_obj:
-                ward_id = ward_obj.id
-            else:
-                print(f"Warning: ward with code '{ward_code}' not found for {official_obj.name}")
 
         # Resolve county/constituency ids
         county_id = None
@@ -394,7 +389,7 @@ with app.app_context():
                         constituency_id = possible_constituency.id
                     else:
                         print(
-                            f"Warning: constituency '{constituency_name}' not found in county '{county_name}' "
+                            f"{Fore.LIGHTRED_EX}Warning: {Fore.RESET}constituency '{constituency_name}' not found in county '{county_name}' "
                             f"for {official_obj.name}"
                        )
 
@@ -407,7 +402,6 @@ with app.app_context():
             end_year=end_year,
             county_id=county_id,
             constituency_id=constituency_id,
-            ward_id=ward_id,
             nomination_type=nomination_type,
         )
         db.session.add(term)
@@ -439,7 +433,10 @@ with app.app_context():
                 end_year=end_year
             )
     db.session.commit()
-    print('Inserted presidents & deputies')
+    pres_count = Official.query.join(Term).join(Position).filter(Position.name == "President").count()
+    dep_count = Official.query.join(Term).join(Position).filter(Position.name == "Deputy President").count()
+    vice_count = Official.query.join(Term).join(Position).filter(Position.name == "Vice President").count()
+    print(f"{Fore.LIGHTGREEN_EX}Inserted {pres_count} presidents, {dep_count} deputy presidents, {vice_count} vice presidents!")
 
     # --- Governors ---
     with open(FILES['governors_csv'], newline='', encoding='utf-8') as fh:
@@ -468,6 +465,8 @@ with app.app_context():
                 end_year=end_yr,
                 )
     db.session.commit()
+    govs_count = Official.query.join(Term).join(Position).filter(Position.name == "Governor").count()
+    print(f"{Fore.LIGHTGREEN_EX}Inserted {govs_count} governors!")
 
     # --- Deputy Governors ---
     with open(FILES['dep_govs_csv'], newline='', encoding='utf-8') as fh:
@@ -516,6 +515,8 @@ with app.app_context():
                 end_year=end_yr,
             )
     db.session.commit()
+    dep_gov_count = Official.query.join(Term).join(Position).filter(Position.name == "Deputy Governor").count()
+    print(f"{Fore.LIGHTGREEN_EX}Inserted {dep_gov_count} deputy governors!")
 
     # --- Senators ---
     with open(FILES['senators_csv'], newline='', encoding='utf-8') as fh:
@@ -536,6 +537,8 @@ with app.app_context():
             county_name = None if county.strip().upper() in ('', 'NOMINATED') else county
             create_term_for_official(off, 'Senator', party_abbr=party, county_name=county_name)
     db.session.commit()
+    sen_count = Official.query.join(Term).join(Position).filter(Position.name == "Senator").count()
+    print(f"{Fore.LIGHTGREEN_EX}Inserted {sen_count} senators!")
 
     # --- Women Reps ---
     with open(FILES['women_csv'], newline='', encoding='utf-8') as fh:
@@ -550,6 +553,8 @@ with app.app_context():
             off = upsert_official(name=name, gender='female', photo_url=photo)
             create_term_for_official(off, 'Women Representative', party_abbr=party, county_name=county)
     db.session.commit()
+    wrep_count = Official.query.join(Term).join(Position).filter(Position.name == "Women Representative").count()
+    print(f"{Fore.LIGHTGREEN_EX}Inserted {wrep_count} women representatives!")
 
     # --- MPs ---
     with open(FILES['mps_csv'], newline='', encoding='utf-8') as fh:
@@ -581,21 +586,11 @@ with app.app_context():
             # If constituency is present but not matched in DB, still create term with null constituency
             create_term_for_official(off, 'MP', party_abbr=party, county_name=county_name, constituency_name=constituency_name)
     db.session.commit()
+    mp_count = Official.query.join(Term).join(Position).filter(Position.name == "MP").count()
+    print(f"{Fore.LIGHTGREEN_EX}Inserted {mp_count} MPs!")
 
     # --- MCAs ---
-    with open(FILES['mcas_csv'], newline='', encoding='utf-8') as fh:
-        reader = csv.DictReader(fh)
-        for row in reader:
-            name = (row.get('Name')).strip()
-            party = (row.get('Party Abbrev')).strip()
-            ward = (row.get('CAW Code')).zfill(4).strip()
-            constituency = (row.get('Const. Name')).strip()
-            county = (row.get('County Name')).strip()
+    # Wards are not resolved yet; we'll create officials and terms without ward_id for now
 
-            off = upsert_official(name=name, gender='other', photo_url='https://f003.backblazeb2.com/file/serikali-images/presidents/placeholder.webp')
-            
-            create_term_for_official(off, 'MCA', party_abbr=party, ward_code=ward, county_name=county, constituency_name=constituency)
-    db.session.commit()
-
-    print('Seeding complete.')
-    print('Officials:', Official.query.count())
+    print(f"{Fore.GREEN}Seeding complete.")
+    print(f"{Fore.GREEN}Officials: {Official.query.count()}")
