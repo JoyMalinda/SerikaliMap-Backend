@@ -19,6 +19,7 @@ geojson = "*"
 services = "*"
 requests = "*"
 psycopg2-binary = "*"
+gunicorn = "*"
 
 [dev-packages]
 black = "*"
