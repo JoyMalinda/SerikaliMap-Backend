@@ -10,6 +10,9 @@ from models import db
 from urllib.parse import quote_plus
 
 from resources.location_search import LocationLookup
+from resources.maps import CountiesMap, CountyDetailMap, ConstituenciesMap
+from resources.presidents import PresidentsResource
+from resources.leaders import CountyOfficialsResource, CountyMPsResource, AllCountyOfficials, AllMPs
 
 load_dotenv()
 
@@ -30,7 +33,7 @@ app.config['JSON_SORT_KEYS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 CORS(app, supports_credentials=True, resources={
-    r"/*": {"origins": ["http://127.0.0.1:5555", "http://127.0.0.1:5555", "http://127.0.0.1:5432", "http://localhost:5432"]}
+    r"/*": {"origins": ["http://127.0.0.1:5173", "http://127.0.0.1:5432", "http://localhost:5432", "http://localhost:5173"]}
 })
 api = Api(app)
 
@@ -39,7 +42,19 @@ api = Api(app)
 def index():
     return jsonify({"message": "Flask app is running!"})
 
+
 api.add_resource(LocationLookup, "/location_search")
+
+api.add_resource(PresidentsResource, "/presidents")
+api.add_resource(CountyOfficialsResource, "/officials/counties/<int:county_id>")
+api.add_resource(CountyMPsResource, "/officials/mps/<int:county_id>")
+api.add_resource(AllCountyOfficials, "/officials/counties")
+api.add_resource(AllMPs, "/officials/mps")
+
+api.add_resource(CountiesMap, "/maps/counties")
+api.add_resource(CountyDetailMap, "/maps/counties/<int:county_id>")
+api.add_resource(ConstituenciesMap, "/maps/constituencies")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

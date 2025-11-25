@@ -107,7 +107,6 @@ class Ward(db.Model, SerializerMixin, TimestampMixin):
     terms = db.relationship("Term", back_populates="ward", passive_deletes=True)
 
     __table_args__ = (
-        UniqueConstraint("name", "constituency_id", name="uq_wards_name_per_constituency"),
         Index("ix_wards_name", text("lower(name)")),
     )
 
@@ -128,7 +127,7 @@ class Position(db.Model, SerializerMixin, TimestampMixin):
 
     __table_args__ = (
         CheckConstraint(
-            "level IN ('national','county','ward')",
+            "level IN ('national','county','constituency','ward')",
             name="ck_positions_level_valid",
         ),
         Index("ix_positions_name", text("lower(name)")),
@@ -205,7 +204,7 @@ class Term(db.Model, SerializerMixin, TimestampMixin):
         db.Integer, db.ForeignKey("positions.id", ondelete="RESTRICT"), nullable=False
     )
     party_id = db.Column(
-        db.Integer, db.ForeignKey("parties.id", ondelete="RESTRICT"), nullable=False
+        db.Integer, db.ForeignKey("parties.id", ondelete="RESTRICT"), nullable=True
     )
 
     start_year = db.Column(db.Integer, nullable=False)
@@ -264,3 +263,4 @@ class Term(db.Model, SerializerMixin, TimestampMixin):
     def __repr__(self) -> str:  # pragma: no cover
         span = f"{self.start_year}-{self.end_year or 'present'}"
         return f"<Term id={self.id} official_id={self.official_id} position_id={self.position_id} {span}>"
+    
