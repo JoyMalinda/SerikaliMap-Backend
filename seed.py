@@ -16,7 +16,7 @@ from flask import Flask
 from sqlalchemy import text
 from dotenv import load_dotenv
 
-from models import db, County, Constituency, Party, Official, Position, Term
+from models import db, County, Constituency, Ward, Party, Official, Position, Term
 
 # try shapely for geo handling
 try:
@@ -28,20 +28,24 @@ except Exception:
     SHAPELY_AVAILABLE = False
 
 BASE_DIR = Path(__file__).parent
-DATA_DIR = BASE_DIR / 'data'
+DATA_DIR = BASE_DIR / 'data' 
+REC_DIR = DATA_DIR / '2022'
+MAP_DIR = DATA_DIR / 'maps'
 
 FILES = {
     'counties_csv': DATA_DIR / 'kenyan_counties.csv',
     'constituency_csv': DATA_DIR / 'constituency_data.csv',
     'parties_csv': DATA_DIR / 'parties.csv',
     'presidents_csv' : DATA_DIR / 'presidents.csv',
-    'senators_csv': DATA_DIR / 'senators.csv',
-    'women_csv': DATA_DIR / 'women_rep.csv',
-    'mps_csv': DATA_DIR / 'mps.csv',
-    'governors_csv': DATA_DIR / 'governors.csv',
-    'dep_govs_csv': DATA_DIR / 'dep_governors.csv',
-    'constituencies_geojson': DATA_DIR / 'constituencies_geojson.json',
-    'counties_geojson': DATA_DIR / 'counties_geojson.json',
+    'senators_csv': REC_DIR / 'senators.csv',
+    'women_csv': REC_DIR / 'women_rep.csv',
+    'mps_csv': REC_DIR / 'mps.csv',
+    'mcas_csv': REC_DIR / 'mcas.csv',
+    'governors_csv': REC_DIR / 'governors.csv',
+    'dep_govs_csv': REC_DIR / 'dep_governors.csv',
+    'constituencies_geojson': MAP_DIR / 'constituencies_geojson.json',
+    'counties_geojson': MAP_DIR / 'counties_geojson.json',
+    'wards_geojson': MAP_DIR / 'wards_geojson.json',
 }
 
 # DB config
@@ -91,6 +95,8 @@ def safe_int(val):
 def format_const_code(code):
     return str(code).zfill(3)
 
+def format_ward_code(code):
+    return str(code).zfill(4)
 
 def load_geojson(path):
     if not Path(path).exists():
@@ -143,6 +149,7 @@ with app.app_context():
         { 'name': 'President', 'level': 'national' },
         { 'name': 'Vice President', 'level': 'national' },
         { 'name': 'Deputy President', 'level': 'national' },
+        { 'name': 'MCA', 'level': 'ward' },
     ]
 
     pos_map = {}
@@ -293,6 +300,7 @@ with app.app_context():
     constituency_by_name = {c.name.strip().upper(): c for c in Constituency.query.all()}
     constituency_by_code = {str(c.code): c for c in Constituency.query.all() if c.code is not None}
 
+
     # --- Parties ---
     party_by_name = {}
     party_by_abbrev = {}
@@ -333,6 +341,7 @@ with app.app_context():
         party_abbr,
         county_name=None,
         constituency_name=None,
+        ward_code=None,
         nomination_type=None,
         start_year=None,
         end_year=None
@@ -357,10 +366,18 @@ with app.app_context():
 
         if not party_obj:
             if party_abbr and party_abbr.strip().lower() in ["independent", "ind"]:
-                print(f"Info: {official_obj.name} is Independent → setting party_id NULL")
                 party_obj = None
             else:
                 print('Warning: party not found for', official_obj.name, 'party abbr=', party_abbr)
+
+        # Resolve ward by code
+        ward_id = None
+        if ward_code:
+            ward_obj = ward_by_code.get(str(ward_code))
+            if ward_obj:
+                ward_id = ward_obj.id
+            else:
+                print(f"Warning: ward with code '{ward_code}' not found for {official_obj.name}")
 
         # Resolve county/constituency ids
         county_id = None
@@ -390,6 +407,7 @@ with app.app_context():
             end_year=end_year,
             county_id=county_id,
             constituency_id=constituency_id,
+            ward_id=ward_id,
             nomination_type=nomination_type,
         )
         db.session.add(term)
@@ -431,13 +449,24 @@ with app.app_context():
             county = (row.get('county') or row.get('County') or '').strip()
             party = (row.get('party') or row.get('Party') or '').strip()
             photo = (row.get('image_url') or row.get('image') or '')
-            gender=(row.get('gender')).strip().lower() 
+            gender=(row.get('gender')).strip().lower()
+            start_yr = safe_int(row.get('start_date'))
+            end_yr = safe_int(row.get('end_date'))
+
             if not name or not county:
                 print('Skipping governor row (missing name or county):', row)
                 continue
+
             off = upsert_official(name=name, gender=gender, photo_url=photo)
             # create term at county level
-            create_term_for_official(off, 'Governor', party_abbr=party, county_name=county)
+            create_term_for_official(
+                off, 
+                position_name="Governor", 
+                party_abbr=party, 
+                county_name=county,
+                start_year=start_yr,
+                end_year=end_yr,
+                )
     db.session.commit()
 
     # --- Deputy Governors ---
@@ -448,6 +477,8 @@ with app.app_context():
             name = row.get('name', '').strip()
             gender = row.get('gender', '').strip().lower()
             photo = row.get('image_url', '').strip()
+            start_yr = safe_int(row.get('start_date'))
+            end_yr = safe_int(row.get('end_date')) 
 
             county = County.query.filter(
                 County.name.ilike(county_name)
@@ -481,8 +512,8 @@ with app.app_context():
                 position_name="Deputy Governor",
                 county_name=county_name,
                 party_abbr=dep_party,
-                start_year=2022,
-                end_year=None,
+                start_year=start_yr,
+                end_year=end_yr,
             )
     db.session.commit()
 
@@ -528,7 +559,6 @@ with app.app_context():
             party = (row.get('party') or row.get('Party') or '').strip()
             constituency = (row.get('constituency') or row.get('Constituency') or '').strip()
             county = (row.get('county') or row.get('County') or '').strip()
-            status = (row.get('status') or '').strip().lower()
             photo = (row.get('image_local_path') or row.get('image') or row.get('image_url') or '')
             gender = (row.get('gender')).strip().lower()
 
@@ -550,6 +580,21 @@ with app.app_context():
             county_name = None if county.strip() == '' else county
             # If constituency is present but not matched in DB, still create term with null constituency
             create_term_for_official(off, 'MP', party_abbr=party, county_name=county_name, constituency_name=constituency_name)
+    db.session.commit()
+
+    # --- MCAs ---
+    with open(FILES['mcas_csv'], newline='', encoding='utf-8') as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            name = (row.get('Name')).strip()
+            party = (row.get('Party Abbrev')).strip()
+            ward = (row.get('CAW Code')).zfill(4).strip()
+            constituency = (row.get('Const. Name')).strip()
+            county = (row.get('County Name')).strip()
+
+            off = upsert_official(name=name, gender='other', photo_url='https://f003.backblazeb2.com/file/serikali-images/presidents/placeholder.webp')
+            
+            create_term_for_official(off, 'MCA', party_abbr=party, ward_code=ward, county_name=county, constituency_name=constituency)
     db.session.commit()
 
     print('Seeding complete.')

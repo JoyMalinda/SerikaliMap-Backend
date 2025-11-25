@@ -174,7 +174,7 @@ class AllCountyOfficials(Resource):
                 }
 
             # Gender counts
-            if term.official.gender in stats[pos_name]["gender_counts"]:
+            if term.end_year == None and term.official.gender in stats[pos_name]["gender_counts"]:
                 stats[pos_name]["gender_counts"][term.official.gender] += 1
             else:
                 stats[pos_name]["gender_counts"]["other"] += 1
@@ -187,7 +187,8 @@ class AllCountyOfficials(Resource):
                     "abbrev": pabbrev,
                     "count": 0,
                 }
-            stats[pos_name]["party_distribution"][pname]["count"] += 1
+            if term.end_year is None:
+                stats[pos_name]["party_distribution"][pname]["count"] += 1
 
         # Convert party_distribution dicts to lists
         for pos in stats:
@@ -223,6 +224,12 @@ class AllMPs(Resource):
             constituency = term.constituency
             county = constituency.county if constituency else None
 
+            if term.party and term.party.abbreviation:
+                abbrev = term.party.abbreviation.split(",")[0].strip()
+                abbrv = abbrev.replace("{", "").replace("}", "")
+            else:
+                abbrv = "Independent"
+
             official_info = {
                 "id": term.official.id,
                 "name": term.official.name,
@@ -233,7 +240,7 @@ class AllMPs(Resource):
                 "constituency": constituency.name if constituency else None,
                 "party": {
                     "name": term.party.name if term.party else "Independent",
-                    "abbrev": term.party.abbreviation if term.party else "IND",
+                    "abbrev": abbrv,
                 },
                 "nomination_type": term.nomination_type,
                 "start_year": term.start_year,

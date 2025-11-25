@@ -107,7 +107,6 @@ class Ward(db.Model, SerializerMixin, TimestampMixin):
     terms = db.relationship("Term", back_populates="ward", passive_deletes=True)
 
     __table_args__ = (
-        UniqueConstraint("name", "constituency_id", name="uq_wards_name_per_constituency"),
         Index("ix_wards_name", text("lower(name)")),
     )
 
