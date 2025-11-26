@@ -45,7 +45,7 @@ app.config['MAIL_DEFAULT_SENDER'] = 'your_email'
 db.init_app(app)
 migrate = Migrate(app, db)
 CORS(app, supports_credentials=True, resources={
-    r"/*": {"origins": ["http://localhost:5173", "https://serikalimap.vercel.app"]}
+    r"/*": {"origins": ["http://localhost:5173", "https://serikali-map.vercel.app"]}
 })
 mail.init_app(app)
 limiter.init_app(app)
