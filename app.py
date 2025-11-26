@@ -9,7 +9,11 @@ from models import db
 
 from urllib.parse import quote_plus
 
+from extensions.mail import mail
+from extensions.limiter import limiter
+
 from resources.location_search import LocationLookup
+from resources.mail import Mail
 from resources.maps import CountiesMap, CountyDetailMap, ConstituenciesMap
 from resources.presidents import PresidentsResource
 from resources.leaders import CountyOfficialsResource, CountyMPsResource, AllCountyOfficials, AllMPs
@@ -30,12 +34,21 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 app.config['JSON_SORT_KEYS'] = False
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'your_email'
+app.config['MAIL_PASSWORD'] = 'your_password'
+app.config['MAIL_DEFAULT_SENDER'] = 'your_email'
+
 # Initialize extensions
 db.init_app(app)
 migrate = Migrate(app, db)
 CORS(app, supports_credentials=True, resources={
-    r"/*": {"origins": ["http://127.0.0.1:5173", "http://127.0.0.1:5432", "http://localhost:5432", "http://localhost:5173"]}
+    r"/*": {"origins": ["http://localhost:5173", "https://serikalimap.vercel.app"]}
 })
+mail.init_app(app)
+limiter.init_app(app)
 api = Api(app)
 
 
@@ -45,6 +58,7 @@ def index():
 
 
 api.add_resource(LocationLookup, "/location_search")
+api.add_resource(Mail, "/send_mail")
 
 api.add_resource(PresidentsResource, "/presidents")
 api.add_resource(CountyOfficialsResource, "/officials/counties/<int:county_id>")
